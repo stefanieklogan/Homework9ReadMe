@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const chalk = require('chalk');
 
 const createReadMe = (answer) =>
 `# ${answer.title}
@@ -47,41 +48,31 @@ const createReadMe = (answer) =>
 
 inquirer
   .prompt([
-    // {
-    //     type: 'input',
-    //     name: 'title',
-    //     message: 'What is the name of your project?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'desc',
-    //     message: 'How would you briefly describe your project?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'install',
-    //     message: 'Are there any installation/dependency requirements?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'usage',
-    //     message: 'What are the usage guidelines for this project?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'contribute',
-    //     message: 'Who contributed to this project?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'name',
-    //     message: 'What is your GitHub username?',
-    // },
-    // {
-    //     type: 'email',
-    //     name: 'email',
-    //     message: 'What is your email address?',
-    // },
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is the name of your project?',
+    },
+    {
+        type: 'input',
+        name: 'desc',
+        message: 'How would you briefly describe your project?',
+    },
+    {
+        type: 'input',
+        name: 'install',
+        message: 'Are there any installation/dependency requirements?',
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'What are the usage guidelines for this project?',
+    },
+    {
+        type: 'input',
+        name: 'contribute',
+        message: 'Who contributed to this project?',
+    },
     {
         type: 'checkbox',
         name: 'badge',
@@ -94,6 +85,16 @@ inquirer
             {name: 'Node.js',
             value: `[![Node.js badge !](https://img.shields.io/badge/Commanded%20with-Nodejs-blueviolet)](https://shields.io/)\n`}
         ],
+    },
+    {
+        type: 'input',
+        name: 'name',
+        message: 'What is your GitHub username?',
+    },
+    {
+        type: 'email',
+        name: 'email',
+        message: 'What is your email address?',
     },
 ])
 
