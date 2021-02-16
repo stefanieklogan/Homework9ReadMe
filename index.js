@@ -9,7 +9,7 @@ const createReadMe = (answer) =>
 2. [ Installation. ](#install)
 3. [ Usage. ](#usage)
 4. [ Contributors. ](#contribute)
-5. [ The other stuff: License & Badges. ](#streetcred)
+5. [ License & Badges. ](#streetcred)
 6. [ Contact. ](#contact)
 
 
@@ -18,70 +18,49 @@ const createReadMe = (answer) =>
 
 * ${answer.desc}
 
-* text
-
 <a name="install"></a>
 ## Installation
 
-* text
+* ${answer.install}
 
 <a name="usage"></a>
 ## Usage
 
-* text
-
-* text
+* ${answer.usage}
 
 <a name="contribute"></a>
 ## Contributors
-
-* text
-
-* text
+[![saythanks !](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
+* ${answer.contribute}
 
 <a name="streetcred"></a>
-## The other stuff: License & Badges
+## License & Badges
 
-* text
+* ${answer.badge}
 
 <a name="contact"></a>
 ## Questions?
-
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
 * Github username: ${answer.name}
 
-* Email:${answer.email}`
+* Email: ${answer.email}`
 
 inquirer
   .prompt([
-    {
-        type: 'input',
-        name: 'name',
-        message: 'What is your GitHub username?',
-    },
-    {
-        type: 'email',
-        name: 'email',
-        message: 'What is your email address?',
-    },
-    {
-        type: 'input',
-        name: 'title',
-        message: 'What is the name of your project?',
-    },
-    {
-        type: 'input',
-        name: 'desc',
-        message: 'How would you describe your project?',
-    },
+    // {
+    //     type: 'input',
+    //     name: 'title',
+    //     message: 'What is the name of your project?',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'desc',
+    //     message: 'How would you briefly describe your project?',
+    // },
     // {
     //     type: 'input',
     //     name: 'install',
-    //     message: 'Are there any installation requirements?',
-    // },
-     // {
-    //     type: 'input',
-    //     name: 'depend',
-    //     message: 'Are there any dependencies?',
+    //     message: 'Are there any installation/dependency requirements?',
     // },
     // {
     //     type: 'input',
@@ -90,10 +69,35 @@ inquirer
     // },
     // {
     //     type: 'input',
-    //     name: 'license',
+    //     name: 'contribute',
+    //     message: 'Who contributed to this project?',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'name',
     //     message: 'What is your GitHub username?',
     // },
+    // {
+    //     type: 'email',
+    //     name: 'email',
+    //     message: 'What is your email address?',
+    // },
+    {
+        type: 'checkbox',
+        name: 'badge',
+        message: 'What frameworks & languages were used in this project?',
+        choices: [
+            {name: 'HTML5',
+            value: `[![HTML5 badge !](https://img.shields.io/badge/Made%20with-HTML5-red)](https://shields.io/)\n`},
+            {name: 'JavaScript',
+            value: `[![JavaScript badge !](https://img.shields.io/badge/Powered%20by-JavaScript-green)](https://shields.io/)\n`},
+            {name: 'Node.js',
+            value: `[![Node.js badge !](https://img.shields.io/badge/Commanded%20with-Nodejs-blueviolet)](https://shields.io/)\n`}
+        ],
+    },
 ])
+
+
 
 .then((answer) => {
 
