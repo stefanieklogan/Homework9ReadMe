@@ -12,7 +12,7 @@
 <a name="description"></a>
 ## Project description
 
-* This project allows a developer to quickly put together a quality readMe file with content, badges and contributor information.
+* This project allows a developer to quickly put together a quality readMe file with content, badges and information for a user.
 
 <a name="install"></a>
 ## Installation
@@ -22,7 +22,7 @@
 <a name="usage"></a>
 ## Usage
 
-* Follow npm dependencies and intall required nodes and package.json.
+* Follow npm dependencies and install required nodes and package.json.
 
 <a name="contribute"></a>
 ## Contributors
