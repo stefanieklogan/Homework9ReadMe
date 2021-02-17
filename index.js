@@ -1,9 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const chalk = require('chalk');
 
-const createReadMe = (answer) =>
-`# ${answer.title}
+const createReadMe = ({title, desc, install, usage, contribute, badge, name, email}) =>
+`# ${title}
 
 ## Table of Contents
 1. [ Description. ](#description)
@@ -17,34 +16,34 @@ const createReadMe = (answer) =>
 <a name="description"></a>
 ## Project description
 
-* ${answer.desc}
+* ${desc}
 
 <a name="install"></a>
 ## Installation
 
-* ${answer.install}
+* ${install}
 
 <a name="usage"></a>
 ## Usage
 
-* ${answer.usage}
+* ${usage}
 
 <a name="contribute"></a>
 ## Contributors
 [![saythanks !](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
-* ${answer.contribute}
+* ${contribute}
 
 <a name="streetcred"></a>
 ## License & Badges
 
-* ${answer.badge}
+* ${badge}
 
 <a name="contact"></a>
 ## Questions?
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
-* Github username: ${answer.name}
+* Github username: ${name}
 
-* Email: ${answer.email}`
+* Email: ${email}`
 
 inquirer
   .prompt([
@@ -97,8 +96,6 @@ inquirer
         message: 'What is your email address?',
     },
 ])
-
-
 
 .then((answer) => {
 

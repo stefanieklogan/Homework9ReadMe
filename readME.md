@@ -12,7 +12,7 @@
 <a name="description"></a>
 ## Project description
 
-* This project allows a developer to quickly put together a quality readMe file with solid content, badges and contribution information.
+* This project allows a developer to quickly put together a quality readMe file with content, badges and contributor information.
 
 <a name="install"></a>
 ## Installation
@@ -22,12 +22,12 @@
 <a name="usage"></a>
 ## Usage
 
-* Follow npm dependencies and install required nodes and .json packages
+* Follow npm dependencies and intall required nodes and package.json.
 
 <a name="contribute"></a>
 ## Contributors
 [![saythanks !](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
-* Solo contribution
+* Jack Ryan, David Rose
 
 <a name="streetcred"></a>
 ## License & Badges
